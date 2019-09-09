@@ -4,7 +4,7 @@ function setupCam() {
   }).then(mediaStream => {
     document.querySelector('#webcamVideo').srcObject = mediaStream;
   }).catch((error) => {
-    console.warn(error);
+    alert(error);
   });
 }
 
