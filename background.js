@@ -11,7 +11,6 @@ chrome.runtime.onInstalled.addListener((details) => {
 
 const vid = document.querySelector('#webcamVideo');
 
-// Setup webcam, initialize the KNN classifier model and start the work loop.
 async function setupCam() {
   navigator.mediaDevices.getUserMedia({
     video: true
@@ -20,8 +19,6 @@ async function setupCam() {
   }).catch((error) => {
     console.warn(error);
   });
-  await knn.load();
-  setTimeout(loop, 50);
 }
 
 // If cam acecss has already been granted to this extension, setup webcam.
